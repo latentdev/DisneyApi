@@ -252,7 +252,11 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\API_Credentials.cs" />
+    <Compile Include="Models\Auth_Token.cs" />
+    <Compile Include="Models\FastPass.cs" />
+    <Compile Include="Models\Ride.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\WaitTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -318,6 +322,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Helper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
