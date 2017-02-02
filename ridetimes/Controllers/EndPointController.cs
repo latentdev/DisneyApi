@@ -15,7 +15,7 @@ namespace ridetimes.Controllers
     public class EndPointController : ApiController
     {
         [HttpGet]
-        public async Task<IHttpActionResult> GetTimes()
+        public async Task<IHttpActionResult> RefreshTimes()
         {
             await Fetch();
             Response();

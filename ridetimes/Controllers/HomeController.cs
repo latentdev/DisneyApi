@@ -10,6 +10,9 @@ using Flurl;
 using Flurl.Http;
 using ridetimes.Models;
 using System.Web.UI.WebControls;
+using System.Web.UI;
+using System.Threading.Tasks;
+using ridetimes.Helper;
 
 namespace ridetimes.Controllers
 {
@@ -18,12 +21,15 @@ namespace ridetimes.Controllers
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
-            return View();
+            
+            return View(Auth_Token.Instance.rides);
         }
+
         public void FillTable()
         {
             var token = Auth_Token.Instance;
+           // Control control = FindControl("table1");
+            //Table table = (Table)FindControl("table1");
             if (token.rides!= null)
             {
                 foreach (Ride ride in token.rides)
@@ -38,7 +44,7 @@ namespace ridetimes.Controllers
                     row.Cells.Add(name);
                     row.Cells.Add(time);
                     row.Cells.Add(status);
-                    table1.Rows.Add(row);
+                    //table.Rows.Add(row);
                 }
             }
         }
