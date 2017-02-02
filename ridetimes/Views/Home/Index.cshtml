@@ -1,5 +1,5 @@
 ﻿@model List<ridetimes.Models.Ride>
-<div class="jumbotron">
+<div class="jumbotron" id="hide">
     <h1>Disneyland Checklist API</h1>
     <p class="lead">Endpoint for Disneyland Checklist app</p>
     <input class="btn btn-primary btn-lg" type="button" value="Fetch Wait Times"  onclick="location.href='@Url.Action("RefreshTimes", "api/EndPoint")'" /> 
@@ -28,6 +28,17 @@
         </div>
     </div>
 </div>
+<a class="col-md-12" id="thanks"></a>
+@section Scripts
+{
+    <script>
+    window.onbeforeunload = function () {
+        $('#hide').remove();
+        $("#thanks").append("THANK YOU").delay(20000);
+        // For Safari
+        return message;
+    };
+</script>}
 
 
 
