@@ -20,13 +20,14 @@ textarea {
     color:black;
 }
 #table{
-    width:100%;
+    /*width:100%;*/
     border-top-left-radius:5px;
     border-top-right-radius:5px;
+    background-color:white;
 }
 #table_header{
     width:auto;
-    background-color:#27ae60;
+    background-color:#1ab188;
     padding:10px;
     border-top-left-radius:5px;
     border-top-right-radius:5px;
@@ -40,6 +41,12 @@ textarea {
 #button1{
     margin-left:20px;
 }
+#hide{
+
+}
+#marginalize{
+    margin:10px;
+}
     #page{
         min-width: 64px;
         padding:0px;
@@ -47,9 +54,16 @@ textarea {
         margin:20px;
         margin-left:0px;
         /*background-color:#353535;*/
-        box-shadow: 7px 7px 2px #100f0f;
-        border-top-left-radius:5px;
-        border-top-right-radius:5px;
+        /*box-shadow: 7px 7px 2px #100f0f;*/
+        /*border-top-left-radius:5px;
+        border-top-right-radius:5px;*/
+    }
+    #card{
+        min-width: 64px;
+        padding:10px;
+        background-color:white;
+        /*box-shadow: 7px 7px 2px #100f0f;*/
+        border-radius:5px;
     }
     #text{
         

@@ -1,11 +1,13 @@
 ﻿@model List<ridetimes.Models.Ride>
 <div class="jumbotron" id="hide">
-    <h1>Disneyland Checklist API</h1>
-    <p class="lead">Endpoint for Disneyland Checklist app</p>
-    <input class="btn btn-primary btn-lg" type="button" value="Fetch Wait Times"  onclick="location.href='@Url.Action("RefreshTimes", "api/EndPoint")'" /> 
+    <div class="col-md-12" id="card">
+        <h1 id="marginalize">Disneyland Checklist API</h1>
+        <p class="lead">Endpoint for Disneyland Checklist app</p>
+        <input class="btn btn-primary btn-lg" type="button" value="Fetch Wait Times"  onclick="location.href='@Url.Action("RefreshTimes", "api/EndPoint")'" /> 
+    </div>
     <div class="col-md-12" id="div1">
         <div id="page">
-            <table class="table-striped" id="table" runat="server">
+            <table class="table" id="table" runat="server">
                 @if (Model != null)
                 {
                     <thead>
