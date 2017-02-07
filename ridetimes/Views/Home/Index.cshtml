@@ -5,29 +5,40 @@
         <p class="lead">Endpoint for Disneyland Checklist app</p>
         <input class="btn btn-primary btn-lg" type="button" value="Fetch Wait Times"  onclick="location.href='@Url.Action("RefreshTimes", "api/EndPoint")'" /> 
     </div>
-    <div class="col-md-12" id="div1">
-        <div id="page">
-            <table class="table" id="table" runat="server">
-                @if (Model != null)
-                {
-                    <thead>
-                    <tr id="table_header">
-                        <th id="text1s">@Html.Raw("Ride")</th>
-                        <th id="text">@Html.Raw("Wait Time")</th>
-                        <th id="text2">@Html.Raw("Status")</th>
-                    </tr>
-                    </thead>
-                    foreach (var ride in Model)
-                    {
-                        <tr>
-                            <td id="text1">@Html.Raw(ride.name)</td>
-                            <td id="text">@Html.Raw(ride.waitTime.postedWaitMinutes.ToString())</td>
-                            <td id="text">@Html.Raw(ride.waitTime.rollUpStatus)</td>
-                        </tr>
-                    }
-                }
-            </table>
-        </div>
+</div>
+<div class="col-md-12" id="div1">
+    <div class="card">
+        @if (Model != null)
+        {
+            <div class="head">
+                <div class="name-head">
+                    <p class="text-bold">@Html.Raw("Ride")</p>
+                </div>
+                <div class="time-head">
+                    <p class="text-bold">@Html.Raw("Wait Time")</p>
+            </div>
+                <div class="status-head">
+                    <p class="text-bold">@Html.Raw("Status")</p>
+                </div>
+            </div>
+            <div class="contain">
+            @foreach (var ride in Model)
+            {
+                <div class="row">
+                    <div class="name">
+                        <p class="text">@Html.Raw(ride.name)</p>
+                    </div>
+                    <div class="time">
+                        <p class="text">@Html.Raw(ride.waitTime.postedWaitMinutes.ToString())</p>
+                    </div>
+                    <div class="status">
+                        <p class="text">@Html.Raw(ride.waitTime.rollUpStatus)</p>
+                    </div>
+                </div>
+            }
+            </div>
+        }
+
     </div>
 </div>
 <a class="col-md-12" id="thanks"></a>
@@ -40,7 +51,8 @@
         // For Safari
         return message;
     };
-</script>}
+</script>
+}
 
 
 
