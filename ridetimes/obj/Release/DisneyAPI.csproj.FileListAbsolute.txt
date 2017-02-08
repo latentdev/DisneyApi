@@ -93,3 +93,4 @@ C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Microsoft.Owin.Security.
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\System.Web.Http.Owin.xml
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Release\ridetimes.dll
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Release\ridetimes.pdb
+C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Release\DisneyAPI.csprojResolveAssemblyReference.cache
