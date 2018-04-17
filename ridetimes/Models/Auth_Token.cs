@@ -13,7 +13,7 @@ namespace ridetimes.Models
         public int expires_in { get; set; }
 
         public String json { get; set; }
-        public List<Ride> rides { get; set; }
+        public List<Models.Entry> rides { get; set; }
 
         private static Auth_Token instance;
 

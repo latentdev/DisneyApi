@@ -54,9 +54,7 @@ C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\System.Web.WebPages.Depl
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\System.Web.WebPages.dll
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\System.Web.WebPages.Razor.dll
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\WebGrease.dll
-C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Flurl.pdb
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Flurl.xml
-C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Flurl.Http.pdb
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Flurl.Http.xml
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Microsoft.AI.ServerTelemetryChannel.xml
@@ -91,6 +89,8 @@ C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Microsoft.Owin.Security.
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\bin\System.Web.Http.Owin.xml
+C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Debug\DisneyAPI.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Debug\DisneyAPI.csproj.CoreCompileInputs.cache
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Debug\ridetimes.dll
 C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Debug\ridetimes.pdb
-C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Debug\DisneyAPI.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\GitHub\DisneyApi\ridetimes\obj\Debug\DisneyAPI.csproj.CopyComplete
