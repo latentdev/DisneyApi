@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Linq;
 using System.Web;
 using System.Threading.Tasks;
+using ridetimes.ViewModel;
 
 namespace ridetimes.Helper
 {
@@ -66,6 +67,11 @@ namespace ridetimes.Helper
             }
             return rides;
             //token.rides = rides;
+        }
+
+        public static RideViewModel GetRideViewModel(Entry entry)
+        {
+            return new RideViewModel { Name = entry.name, WaitTime = entry.waitTime.postedWaitMinutes, Status = entry.waitTime.rollUpStatus, Description="Placeholder for Data", History = new List<string> { "Placeholder for Data" } };
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -37,6 +38,7 @@ namespace ridetimes.Models
     {
         public Links1 links { get; set; }
         public string id { get; set; }
+        [Display(Name = "Ride Name")]
         public string name { get; set; }
         public string type { get; set; }
         public WaitTime waitTime { get; set; }
@@ -74,7 +76,9 @@ namespace ridetimes.Models
         public Fastpass fastPass { get; set; }
         public string status { get; set; }
         public bool singleRider { get; set; }
+        [Display(Name = "Wait Time")]
         public int postedWaitMinutes { get; set; }
+        [Display(Name = "Status")]
         public string rollUpStatus { get; set; }
         public string rollUpWaitTimeMessage { get; set; }
 

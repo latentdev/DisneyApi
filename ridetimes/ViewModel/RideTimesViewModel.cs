@@ -1,14 +1,14 @@
 ﻿using ridetimes.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace ridetimes.ViewModel
 {
     public class RideTimesViewModel
     {
+        [Display(Name = "Disneyland")]
         public List<Entry> DisneyLand { get; set; }
+        [Display(Name = "California Adventure")]
         public List<Entry> CaliforniaAdventure { get; set; }
     }
 }

@@ -1,102 +1,107 @@
 ﻿
 @model ridetimes.ViewModel.RideTimesViewModel
-<div class="jumbotron" id="hide" style="background-color:#3c4144">
-    <div class="col-md-12" id="card" style="margin-bottom:20px">
-        <h1 id="marginalize">Disneyland Checklist API</h1>
-        <p class="lead">Endpoint for Disneyland Checklist app</p>
-        @*<input class="btn btn-primary btn-lg" type="button" value="Wake"  onclick="location.href='@Url.Action("Wake", "api/EndPoint")'" />*@
-        <input class="btn btn-primary btn-lg" type="button" value="Fetch DisneyLand Wait Times" onclick="location.href='@Url.Action("DisneyLandTimes", "api/EndPoint")'" />
-        <input class="btn btn-primary btn-lg" type="button" value="Fetch California Adventure Wait Times" onclick="location.href='@Url.Action("CaliforniaAdventureTimes", "api/EndPoint")'" />
-    </div>
-    
-    <div class="col-md-12" id="div1">
+
+<div class="col-md-12">
+    <div class="row">
         <div class="col-md-6">
-            <div class="card">
-                @if (Model.DisneyLand != null)
-                {
-                    <div class="head">
-                        <div class="title-name">
-                            <p class="title-name-text">Disneyland California</p>
-                        </div>
-                        <div>
-                            <div class="name-head">
-                                <p class="text-bold-name">@Html.Raw("Ride")</p>
-                            </div>
-                            <div class="time-head">
-                                <p class="text-bold">@Html.Raw("Wait Time")</p>
-                            </div>
-                            <div class="status-head">
-                                <p class="text-bold">@Html.Raw("Status")</p>
-                            </div>
-                        </div>
+            <div class="card bg-dark text-light" id="title-card">
+                <h2 id="title-card-header">Disneyland</h2>
+                <div style="padding-bottom:20px">
+                    <div class="scroll">
+                        <table class="table table-striped table-hover table-bordered">
+                            <tr>
+                                <th>
+                                    Ride
+                                </th>
+                                <th>
+                                    Wait Time
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th></th>
+                            </tr>
 
+                            @foreach (var item in Model.DisneyLand)
+                            {
+                                <tr class="table-row">
+                                    <td id="ride-name">
+                                        @Html.DisplayFor(modelItem => item.name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.waitTime.postedWaitMinutes)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.waitTime.rollUpStatus)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("View", "GetRide", "Home", new { ride = item.name }, new { @class = "btn btn-outline-info btn-sm" })
+                                    </td>
+                                </tr>
+                            }
+                        </table>
                     </div>
-                    <div class="contain">
-                        @foreach (var ride in Model.DisneyLand)
-                        {
-                            <div class="row">
-                                <div class="name">
-                                    <p class="text-name">@Html.Raw(ride.name)</p>
-                                </div>
-                                <div class="time">
-                                    <p class="text">@Html.Raw(ride.waitTime.postedWaitMinutes.ToString())</p>
-                                </div>
-                                <div class="status">
-                                    <p class="text">@Html.Raw(ride.waitTime.rollUpStatus)</p>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                }
-
+                </div>
             </div>
         </div>
-        <div style="height:30px" />
         <div class="col-md-6">
-            <div class="card">
-                @if (Model.CaliforniaAdventure != null)
-                {
-                    <div class="head">
-                        <div class="title-name">
-                            <p class="title-name-text">California Adventure</p>
-                        </div>
-                        <div>
-                            <div class="name-head">
-                                <p class="text-bold-name">@Html.Raw("Ride")</p>
-                            </div>
-                            <div class="time-head">
-                                <p class="text-bold">@Html.Raw("Wait Time")</p>
-                            </div>
-                            <div class="status-head">
-                                <p class="text-bold">@Html.Raw("Status")</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contain">
-                        @foreach (var ride in Model.CaliforniaAdventure)
-                        {
-                            <div class="row">
-                                <div class="name">
-                                    <p class="text-name">@Html.Raw(ride.name)</p>
-                                </div>
-                                <div class="time">
-                                    <p class="text">@Html.Raw(ride.waitTime.postedWaitMinutes.ToString())</p>
-                                </div>
-                                <div class="status">
-                                    <p class="text">@Html.Raw(ride.waitTime.rollUpStatus)</p>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                }
+            <div class="card bg-dark text-light" id="title-card">
+                <h2 id="title-card-header">California Adventure</h2>
+
+
+                <table class="table table-striped table-hover table-bordered scroll">
+                    <tr>
+                        <th>
+                            Ride
+                        </th>
+                        <th>
+                            Wait Time
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model.CaliforniaAdventure)
+                    {
+                        <tr class="table-row">
+                            <td id="ride-name">
+                                @Html.DisplayFor(modelItem => item.name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.waitTime.postedWaitMinutes)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.waitTime.rollUpStatus)
+                            </td>
+                            <td>
+                                @Html.ActionLink("View", "GetRide", "Home", new { ride = item.name }, new { @class = "btn btn-outline-info btn-sm" })
+                            </td>
+                        </tr>
+                    }
+                </table>
             </div>
         </div>
     </div>
 </div>
+@*</div>*@
 @section Scripts
 {
     <script>
-
+        $(document).ready(function () {
+            $(".table-row").click(function () {
+                var serviceURL = '/Home/Ride';
+                var RideName = $(this).find("#ride-name").text().trim();
+                $.ajax({
+                    type: "POST",
+                    url: '/Home/GetRide',
+                    data: param = RideName,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                });
+            });
+        }
     </script>
 }
 

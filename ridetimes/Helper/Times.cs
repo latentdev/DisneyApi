@@ -1,14 +1,7 @@
-﻿using Flurl.Http;
-using ridetimes.Models;
+﻿using ridetimes.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Http.Results;
-using System.Web.Mvc;
-using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace ridetimes.Helper
 {
@@ -32,11 +25,13 @@ namespace ridetimes.Helper
             CurrentRides.Update();
             var stamp = DateTime.Now;
             //need to move to another thread
-            Task t = Task.Factory.StartNew(() =>
-            {
-                Database.Insert(CurrentRides.Disneyland, (int)Parks.Disneyland, stamp);
-                Database.Insert(CurrentRides.CaliforniaAdventure, (int)Parks.CaliforniaAdventure, stamp);
-            });
+
+            //TEMP DO NOT DELETE!!!!!!!
+            //Task t = Task.Factory.StartNew(() =>
+            //{
+            //    Database.Insert(CurrentRides.Disneyland, (int)Parks.Disneyland, stamp);
+            //    Database.Insert(CurrentRides.CaliforniaAdventure, (int)Parks.CaliforniaAdventure, stamp);
+            //});
         }
 
         public static async void countdown(Auth_Token token)

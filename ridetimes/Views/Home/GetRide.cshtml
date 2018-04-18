@@ -1,0 +1,57 @@
+﻿@model ridetimes.ViewModel.RideViewModel
+
+@{
+    ViewBag.Title = "GetRide";
+}
+<div class="card bg-dark text-light" id="title-card-header">
+    <h2>@Html.DisplayFor(model => model.Name)</h2>
+
+    <div>
+        <hr />
+        <div class="row">
+            <div class="col-md-9">
+                <h4>
+                    Description
+                </h4>
+                <hr />
+                <p>
+                    @Html.DisplayFor(model => model.Description)
+                </p>
+                <h4>
+                    History
+                </h4>
+                <hr />
+                @foreach (var item in Model.History)
+                {
+                    <p>
+                        @Html.DisplayFor(model => item)
+                    </p>
+                }
+            </div>
+            <div class="col-md-3">
+                <dl class="dl-horizontal">
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.WaitTime)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.WaitTime)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Status)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,105 @@
+﻿
+@model ridetimes.ViewModel.RideTimesViewModel
+
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card bg-dark text-light" id="title-card">
+                <h2 id="title-card-header">Disneyland</h2>
+                <table class="table table-striped table-hover table-bordered scroll">
+                    <tr>
+                        <th>
+                            Ride
+                        </th>
+                        <th>
+                            Wait Time
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model.DisneyLand)
+                    {
+                        <tr class="table-row">
+                            <td id="ride-name">
+                                @Html.DisplayFor(modelItem => item.name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.waitTime.postedWaitMinutes)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.waitTime.rollUpStatus)
+                            </td>
+                            <td>
+                                @Html.ActionLink("View", "GetRide", "Home", new { ride = item.name }, new { @class = "btn btn-outline-info btn-sm" })
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-dark text-light" id="title-card">
+                    <h2 id="title-card-header">California Adventure</h2>
+
+
+                <table class="table table-striped table-hover table-bordered scroll">
+                    <tr>
+                        <th>
+                            Ride
+                        </th>
+                        <th>
+                            Wait Time
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model.CaliforniaAdventure)
+                    {
+                        <tr class="table-row">
+                            <td id="ride-name">
+                                @Html.DisplayFor(modelItem => item.name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.waitTime.postedWaitMinutes)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.waitTime.rollUpStatus)
+                            </td>
+                            <td>
+                                @Html.ActionLink("View", "GetRide", "Home", new { ride = item.name }, new { @class = "btn btn-outline-info btn-sm" })
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@*</div>*@
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $(".table-row").click(function () {
+                var serviceURL = '/Home/Ride';
+                var RideName = $(this).find("#ride-name").text().trim();
+                $.ajax({
+                    type: "POST",
+                    url: '/Home/GetRide',
+                    data: param = RideName,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                });
+            });
+        }
+    </script>
+}
+
+
+
