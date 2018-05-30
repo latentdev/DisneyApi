@@ -22,6 +22,7 @@
 
     overflow-y: auto;
     overflow-x: hidden;
+    height: 800px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -39,7 +40,7 @@ textarea {
     margin-top: 15px;
     padding: 10px;
     padding-left: 35px;
-    height:inherit;
+
 }
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');

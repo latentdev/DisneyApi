@@ -10,25 +10,23 @@
         <hr />
         <div class="row">
             <div class="col-md-9">
-                <dl class="dl-horizontal">
-
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Description)
-                    </dt>
-
-                    <dd>
-                        @Html.DisplayFor(model => model.Description)
-                    </dd>
-
-                    <dt>
-                        @Html.DisplayNameFor(model => model.History)
-                    </dt>
-
-                    <dd>
-                        @Html.DisplayFor(model => model.History)
-                    </dd>
-
-                </dl>
+                <h4>
+                    Description
+                </h4>
+                <hr />
+                <p>
+                    @Html.DisplayFor(model => model.Description)
+                </p>
+                <h4>
+                    History
+                </h4>
+                <hr />
+                @foreach (var item in Model.History)
+                {
+                    <p>
+                        @Html.DisplayFor(model => item)
+                    </p>
+                }
             </div>
             <div class="col-md-3">
                 <dl class="dl-horizontal">

@@ -228,3 +228,6 @@ C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\obj\Release\DisneyAPI.csproj
 C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\obj\Release\DisneyAPI.csproj.CoreCompileInputs.cache
 C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\obj\Release\ridetimes.dll
 C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\obj\Release\ridetimes.pdb
+C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\bin\HtmlAgilityPack.dll
+C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\bin\HtmlAgilityPack.pdb
+C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\bin\HtmlAgilityPack.xml

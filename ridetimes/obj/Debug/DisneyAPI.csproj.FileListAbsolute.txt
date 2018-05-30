@@ -230,4 +230,5 @@ C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\obj\Debug\ridetimes.pdb
 C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\bin\HtmlAgilityPack.dll
 C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\bin\HtmlAgilityPack.pdb
 C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\bin\HtmlAgilityPack.xml
-C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\obj\Debug\DisneyAPI.csprojResolveAssemblyReference.cache
+C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\obj\Debug\DisneyAPI.csprojAssemblyReference.cache
+C:\Users\LatentDev\source\repos\DisneyApi\ridetimes\obj\Debug\DisneyAPI.csproj.CopyComplete
